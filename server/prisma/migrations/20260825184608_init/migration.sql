@@ -1,0 +1,10 @@
+-- CreateTable
+CREATE TABLE "Expense" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "amount" REAL NOT NULL,
+    "category" TEXT NOT NULL,
+    "merchant" TEXT,
+    "note" TEXT,
+    "date" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
