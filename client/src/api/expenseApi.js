@@ -1,4 +1,8 @@
-const API_URL = 'http://localhost:5000/api/expenses'
+// =====================================================
+// PAISAWISE API CONFIGURATION
+// =====================================================
+
+const API_URL = 'https://paisawise-1.onrender.com/api/expenses'
 
 
 // =====================================================
@@ -165,6 +169,7 @@ export const updateBudget = async (amount) => {
   return response.json()
 }
 
+
 // =====================================================
 // DELETE EXPENSE
 // =====================================================
@@ -190,6 +195,7 @@ export const deleteExpense = async (id) => {
   return response.json()
 }
 
+
 // =====================================================
 // UPDATE EXPENSE
 // =====================================================
@@ -199,9 +205,11 @@ export const updateExpense = async (id, expense) => {
     `${API_URL}/${id}`,
     {
       method: 'PUT',
+
       headers: {
         'Content-Type': 'application/json',
       },
+
       body: JSON.stringify(expense),
     }
   )
